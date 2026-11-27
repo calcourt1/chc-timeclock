@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHC Time Clock crew texts — SMS opt-in</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 42rem;
+      margin: 2rem auto;
+      padding: 0 1.25rem 3rem;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.75rem; }
+    p { margin: 0.75rem 0; }
+    .meta { color: #444; }
+    a { color: #0b4f8a; }
+    ul { padding-left: 1.25rem; }
+    form {
+      margin: 1.25rem 0 0;
+      padding: 1rem 1.1rem 1.15rem;
+      border: 1px solid #ccc;
+      background: #fafafa;
+    }
+    label { display: block; margin: 0.85rem 0 0.3rem; }
+    input[type="tel"] {
+      font: inherit;
+      width: 100%;
+      max-width: 22rem;
+      padding: 0.35rem 0.45rem;
+      border: 1px solid #888;
+      box-sizing: border-box;
+    }
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .consent input[type="checkbox"] {
+      margin-top: 0.35rem;
+      flex: 0 0 auto;
+    }
+    .consent span { display: block; }
+    button {
+      font: inherit;
+      margin-top: 0.9rem;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+    }
+    #thanks {
+      margin-top: 1rem;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #0b4f8a;
+      background: #f3f8fc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CHC Time Clock crew texts</h1>
+  <p class="meta">CHC Construction and Home Repair<br>Piedmont, OK<br>Employee SMS opt-in</p>
+
+  <p>This page is how employees of <strong>CHC Construction and Home Repair</strong> in Piedmont, OK agree to receive <strong>CHC Time Clock crew texts</strong>. This program is for CHC employees only. It is not for customers, vendors, or the public, and it is not used for marketing or promotions.</p>
+
+  <h2>What these messages are</h2>
+  <p>Messages are time clock prompts and clock-in/clock-out confirmations from the CHC Time Clock number, (405) 709-8415. Employees text IN and a job name to clock in, and OUT to clock out, and receive a short confirmation that the punch was recorded.</p>
+
+  <h2>Frequency and rates</h2>
+  <p>Message frequency varies. Employees typically receive up to about 4 messages per workday. Msg &amp; data rates may apply.</p>
+
+  <h2>Opt out and help</h2>
+  <p>Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help. You can also text <strong>START</strong> to the same number to opt in or rejoin.</p>
+  <p>Consent to receive these texts is not a condition of employment.</p>
+  <p>Please read our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a> before you agree.</p>
+
+  <h2>Agree to receive texts</h2>
+  <p>Enter your mobile number and check the consent box below if you want to receive CHC Time Clock crew texts. The consent box is unchecked unless you check it yourself. This form does not send your number to a third party or store it on this website. After you agree, text <strong>START</strong> to (405) 709-8415 from that phone to complete opt-in.</p>
+
+  <form id="opt-in-form" action="#" method="get">
+    <label for="mobile">Mobile phone number</label>
+    <input type="tel" id="mobile" name="mobile" autocomplete="tel" inputmode="tel" required placeholder="(XXX) XXX-XXXX">
+
+    <div class="consent">
+      <input type="checkbox" id="consent" name="consent" value="yes" required>
+      <label for="consent"><span>I am a current employee of CHC Construction and Home Repair, and I agree to receive CHC Time Clock crew texts from CHC Construction and Home Repair at the mobile number I entered. These messages are time clock prompts and clock-in/clock-out confirmations for employees only. Message frequency varies and is typically up to about 4 messages per workday. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of employment. I have read the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</span></label>
+    </div>
+
+    <button type="submit">Agree and continue</button>
+  </form>
+
+  <p id="thanks" hidden>Thank you. Your agreement was recorded on this page only and was not sent to any third party. To complete opt-in, text START to (405) 709-8415 from the phone number you entered. Reply STOP to opt out, HELP for help. Msg &amp; data rates may apply.</p>
+
+  <noscript><p>This form does not submit your information over the internet. To opt in, text START to (405) 709-8415 from your own phone after reading the consent language above.</p></noscript>
+
+  <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
+
+  <script>
+    document.getElementById('opt-in-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('thanks').hidden = false;
+    });
+  </script>
+</body>
+</html>
